@@ -1,4 +1,8 @@
 
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Rumassa.Aplication;
+using Rumassa.Infrustructor;
+
 namespace Rumassa.Api
 {
     public class Program
@@ -6,6 +10,9 @@ namespace Rumassa.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddApplicationServices();
+            builder.Services.AddInfrastructure(builder.Configuration);
 
             // Add services to the container.
 

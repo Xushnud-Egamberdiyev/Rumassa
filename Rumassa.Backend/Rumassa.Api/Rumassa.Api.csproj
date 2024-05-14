@@ -14,4 +14,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Rumassa.Aplication\Rumassa.Aplication.csproj" />
+    <ProjectReference Include="..\Rumassa.Infrustructor\Rumassa.Infrustructor.csproj" />
+  </ItemGroup>
+
 </Project>

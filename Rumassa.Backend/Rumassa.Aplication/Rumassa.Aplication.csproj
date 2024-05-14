@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UseCases\Product\**" />
+    <EmbeddedResource Remove="UseCases\Product\**" />
+    <None Remove="UseCases\Product\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Abstraction\" />
-    <Folder Include="UseCases\CategoryCases\Handlers\QueryHandlers\" />
-    <Folder Include="UseCases\CategoryCases\Queries\" />
     <Folder Include="UseCases\CommentCases\Commands\" />
     <Folder Include="UseCases\CommentCases\Handlers\" />
     <Folder Include="UseCases\CommentCases\Queries\" />
@@ -25,9 +29,6 @@
     <Folder Include="UseCases\OrderCases\Handlers\" />
     <Folder Include="UseCases\OrderCases\Commands\" />
     <Folder Include="UseCases\OrderCases\Queries\" />
-    <Folder Include="UseCases\Product\Handlers\" />
-    <Folder Include="UseCases\Product\Commands\" />
-    <Folder Include="UseCases\Product\Queries\" />
     <Folder Include="UseCases\ReviewCases\Handlers\" />
     <Folder Include="UseCases\ReviewCases\Commands\" />
     <Folder Include="UseCases\ReviewCases\Queries\" />
