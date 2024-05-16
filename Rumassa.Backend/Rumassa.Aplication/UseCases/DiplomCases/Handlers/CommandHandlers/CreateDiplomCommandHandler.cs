@@ -1,7 +1,7 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Rumassa.Aplication.Abstraction;
 using Rumassa.Application.UseCases.DiplomCases.Commands;
-using Rumassa.Domain.Entities;
 using Rumassa.Domain.Entities.DTOs;
 
 namespace Rumassa.Application.UseCases.DiplomCases.Handlers.CommandHandlers
@@ -9,14 +9,14 @@ namespace Rumassa.Application.UseCases.DiplomCases.Handlers.CommandHandlers
     public class CreateDiplomCommandHandler : IRequestHandler<CreateDiplomCommand, ResponseModel>
     {
         private readonly IRumassaDbContext _context;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public CreateDiplomCommandHandler(IRumassaDbContext context, IWebHostEnvironment webHostEnvironment)
+        public CreateDiplomCommandHandler(IRumassaD bContext context, IWebHostEnvironment webHostEnvironment)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
         }
 
-        private readonly IWebHostEnvironment _webHostEnvironment;
         public async Task<ResponseModel> Handle(CreateDiplomCommand request, CancellationToken cancellationToken)
         {
             if (request != null)
